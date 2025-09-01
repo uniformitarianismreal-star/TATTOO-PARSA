@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سبک‌های تتو</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>سبک‌های تتو</h1>
+    <a href="index.html">بازگشت به خانه</a>
+  </header>
+
+  <section class="tattoo-styles">
+    <h2>سبک‌های مختلف تتو</h2>
+    <ul>
+      <li><a href="dotwork.html">Dot Work</a></li>
+      <li><a href="blackwork.html">Black Work</a></li>
+      <li><a href="watercolor.html">Watercolor</a></li>
+      <!-- سبک‌های دیگر -->
+    </ul>
+  </section>
+</body>
+</html>blackwork.html
