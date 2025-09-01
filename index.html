@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>وبلاگ پارسا عزیزی</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header>
+  <button onclick="showSection('portfolio')">نمونه کارها</button>
+  <button onclick="showSection('about')">درباره من</button>
+</header>
+
+<section id="portfolio" class="active">
+  <h1>نمونه کارها</h1>
+  <div class="gallery">
+    <img src="assets/work1.jpg" alt="نمونه کار 1">
+    <img src="assets/work2.jpg" alt="نمونه کار 2">
+    <img src="assets/work3.jpg" alt="نمونه کار 3">
+  </div>
+  <div class="character">
+    <h2>شخصیت Mitsuri Kanroji</h2>
+    <img src="assets/mitsuri.png" alt="Mitsuri Kanroji">
+  </div>
+</section>
+
+<section id="about">
+  <h1>درباره من</h1>
+  <p>سلام! من پارسا عزیزی هستم و این وبلاگ برای معرفی نمونه کارها و نمایش علاقه من به انیمه ساخته شده.</p>
+  <div class="character">
+    <img src="assets/mitsuri.png" alt="Mitsuri Kanroji">
+  </div>
+</section>
+
+<footer>
+  پارسا عزیزی
+</footer>
+
+<script>
+function showSection(id) {
+  document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
