@@ -1,0 +1,42 @@
+function uploadImage() {
+  const fileInput = document.getElementById('fileInput');
+  if(fileInput.files.length === 0){
+    alert('یک فایل انتخاب کنید!');
+    return;
+  }
+  const file = fileInput.files[0];
+  const reader = new FileReader();
+  reader.onload = function(e){
+    const imgContainer = document.createElement('div'); // کانتینر برای عکس + دکمه حذف
+    imgContainer.style.position = 'relative';
+    imgContainer.style.display = 'inline-block';
+    imgContainer.style.margin = '10px';
+
+    const img = document.createElement('img');
+    img.src = e.target.result;
+    img.alt = file.name;
+    img.style.width = '200px';
+    img.style.height = '150px';
+    img.style.borderRadius = '10px';
+    img.style.objectFit = 'cover';
+
+    const delBtn = document.createElement('button');
+    delBtn.innerText = 'حذف';
+    delBtn.style.position = 'absolute';
+    delBtn.style.top = '5px';
+    delBtn.style.right = '5px';
+    delBtn.style.padding = '5px 10px';
+    delBtn.style.background = 'rgba(255,0,0,0.8)';
+    delBtn.style.color = '#fff';
+    delBtn.style.border = 'none';
+    delBtn.style.cursor = 'pointer';
+    delBtn.style.borderRadius = '5px';
+
+    delBtn.onclick = () => imgContainer.remove(); // حذف تصویر
+
+    imgContainer.appendChild(img);
+    imgContainer.appendChild(delBtn);
+    document.getElementById('gallery').appendChild(imgContainer);
+  };
+  reader.readAsDataURL(file);
+}
