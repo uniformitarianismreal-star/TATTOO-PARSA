@@ -1,0 +1,4 @@
+<!-- Lightbox -->
+<div id="lightbox" onclick="this.style.display='none'">
+  <img id="lightbox-img" src="" alt="Lightbox">
+</div>
