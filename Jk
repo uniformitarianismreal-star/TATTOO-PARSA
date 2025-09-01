@@ -1,0 +1,5 @@
+<section id="upload">
+  <h2>آپلود عکس</h2>
+  <input type="file" id="fileInput" accept="image/*">
+  <button onclick="uploadImage()">آپلود</button>
+</section>
